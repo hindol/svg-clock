@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  background: #84A59D;
+}
+#clock-container {
+  display: inline-block;
+  position: relative;
+  width: 20%;
+  padding-bottom: 100%;
+  vertical-align: middle;
+  overflow: hidden;
+}
+#face {
+  stroke-width: 2px;
+  stroke: #F7EDE2;
+  fill: #F6BD60;
+}
+#hour-hand, #minute-hand, #second-hand {
+  stroke-width: 1px;
+  fill: #F5CAC3;
+  stroke: #84A59D;
+}
+#second-hand { stroke: #F28482; }
+.tick { stroke: #F7EDE2 }

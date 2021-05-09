@@ -1,0 +1,16 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src/dev"
+  "src/main"
+  "src/test"]
+
+ :dependencies
+ [[reagent "1.0.0"]]
+
+ :dev-http
+ {8000 "public"}
+
+ :builds
+ {:app {:target  :browser
+        :modules {:main {:init-fn com.github.hindol.svg-clock/init}}
+        :release {:output-dir "docs/js"}}}}
