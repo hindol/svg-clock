@@ -23,12 +23,14 @@
     [:svg {:view-box "0 0 100 100"}
      [:circle#face {:cx 50 :cy 50 :r 45}]
      [:g#ticks
-      (for [i (range 0 60 5)]
+      (for [i (range 0 60 1)]
         ^{:key i}
         [:line.tick {:x1 50
                      :y1 6
                      :x2 50
-                     :y2 10
+                     :y2 (if (= 0 (rem i 5))
+                           10
+                           7.5)
                      :transform (str "rotate(" (* 6 i) " 50 50)")}])]
      [:g#hands
       [:rect#hour-hand {:x         47.5
@@ -50,7 +52,8 @@
                           :y1        50
                           :x2        50
                           :y2        16
-                          :transform (str "rotate(" (* 6 second) " 50 50)")}]]]))
+                          :transform (str "rotate(" (* 6 second) " 50 50)")}]
+      [:circle#pin {:cx 50 :cy 50 :r 1.5}]]]))
 
 (defn app
   []

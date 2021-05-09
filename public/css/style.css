@@ -21,4 +21,5 @@ body {
   stroke: #84A59D;
 }
 #second-hand { stroke: #F28482; }
-.tick { stroke: #F7EDE2 }
+#pin { stroke: #F28482; fill: #F7EDE2; }
+.tick { stroke: #F7EDE2; }
